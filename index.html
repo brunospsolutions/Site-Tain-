@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Puerê Puerá | Ecobags Exclusivas</title>
+  <title>Puerê Puerá | Ecobag Arcos da Lapa</title>
   <style>
     :root {
       --terracotta: #8c4327;
@@ -78,12 +78,11 @@
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 900px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
 
-    /* Banner do Brinde */
     .gift-banner {
       background: #eaf5ed;
       border: 2px dashed var(--green-promo);
@@ -96,88 +95,119 @@
       font-size: 1.05rem;
     }
 
-    .grid-produtos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-
-    .card {
+    /* Card Principal de Oferta Unificada */
+    .offer-card {
       background: var(--sand-card);
       border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(74, 39, 23, 0.06);
+      border: 2px solid var(--beige-border);
+      box-shadow: 0 4px 20px rgba(74, 39, 23, 0.08);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      padding: 2rem;
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .offer-card {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .product-gallery {
       display: flex;
       flex-direction: column;
+      align-items: center;
+    }
+
+    .main-img {
+      width: 100%;
+      max-height: 380px;
+      object-fit: cover;
+      border-radius: 8px;
       border: 1px solid var(--beige-border);
-      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-      position: relative;
     }
 
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 25px rgba(140, 67, 39, 0.15);
-      border-color: var(--terracotta);
+    .color-picker {
+      display: flex;
+      gap: 15px;
+      margin-top: 1rem;
+      width: 100%;
     }
 
-    .badge-brinde {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: var(--green-promo);
-      color: #fff;
-      padding: 4px 10px;
-      font-size: 0.75rem;
+    .color-btn {
+      flex: 1;
+      padding: 10px;
+      border: 2px solid var(--beige-border);
+      background: var(--sand-light);
+      border-radius: 8px;
+      cursor: pointer;
       font-weight: bold;
-      border-radius: 20px;
-      text-transform: uppercase;
-    }
-
-    .card-img-container {
-      background-color: #f2ebe1;
-      height: 320px;
+      color: var(--text);
       display: flex;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
-      border-bottom: 1px solid var(--beige-border);
+      gap: 8px;
+      transition: all 0.2s;
     }
 
-    .card-img-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .color-btn.active {
+      border-color: var(--terracotta);
+      background: #fff;
+      color: var(--terracotta);
+      box-shadow: 0 2px 8px rgba(140, 67, 39, 0.15);
     }
 
-    .card-content {
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
+    .dot-black {
+      width: 14px;
+      height: 14px;
+      background: #000;
+      border-radius: 50%;
+      display: inline-block;
     }
 
-    .card-title {
-      font-size: 1.25rem;
+    .dot-natural {
+      width: 14px;
+      height: 14px;
+      background: #e6dac8;
+      border-radius: 50%;
+      border: 1px solid #aaa;
+      display: inline-block;
+    }
+
+    .product-info h2 {
+      font-size: 1.8rem;
       color: var(--dark-earth);
       margin-bottom: 0.5rem;
-      font-weight: 700;
     }
 
-    .card-desc {
-      font-size: 0.9rem;
-      color: #66544a;
-      margin-bottom: 1rem;
-      flex-grow: 1;
-    }
-
-    .card-price {
-      font-size: 1.5rem;
-      font-weight: 800;
+    .product-price {
+      font-size: 2.2rem;
+      font-weight: 900;
       color: var(--terracotta);
-      margin-bottom: 1rem;
+      margin: 0.8rem 0;
     }
 
-    .card-price.free {
+    .gift-box-inline {
+      background: #eaf5ed;
+      border-left: 4px solid var(--green-promo);
+      padding: 10px 15px;
+      border-radius: 0 6px 6px 0;
+      margin: 1rem 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .gift-box-inline img {
+      width: 50px;
+      height: 65px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .gift-box-inline div {
+      font-size: 0.88rem;
       color: var(--green-promo);
     }
 
@@ -185,12 +215,12 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      margin-bottom: 1rem;
+      margin: 1.5rem 0;
     }
 
     .qty-btn {
-      width: 36px;
-      height: 36px;
+      width: 38px;
+      height: 38px;
       background: var(--sand-light);
       border: 1px solid var(--terracotta);
       font-size: 1.2rem;
@@ -200,28 +230,22 @@
       color: var(--terracotta);
     }
 
-    .qty-btn:hover {
-      background: var(--terracotta);
-      color: var(--white);
-    }
-
     .qty-input {
-      width: 45px;
+      width: 50px;
       text-align: center;
-      font-size: 1rem;
+      font-size: 1.1rem;
       font-weight: bold;
       border: 1px solid var(--beige-border);
       border-radius: 6px;
       padding: 5px;
-      background: #fff;
     }
 
-    /* Resumo e Checkout */
+    /* Checkout */
     .checkout-box {
       background: var(--sand-card);
       border-radius: 12px;
       padding: 2rem;
-      margin-top: 3rem;
+      margin-top: 2.5rem;
       border: 2px solid var(--terracotta);
       box-shadow: 0 4px 20px rgba(74, 39, 23, 0.08);
     }
@@ -232,7 +256,7 @@
       border-bottom: 2px solid var(--beige-border);
       padding-bottom: 0.5rem;
       text-transform: uppercase;
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       font-weight: 800;
     }
 
@@ -259,10 +283,6 @@
       border-radius: 6px;
       cursor: pointer;
       font-weight: bold;
-    }
-
-    .btn-action:hover {
-      background: var(--terracotta);
     }
 
     .frete-options {
@@ -320,10 +340,6 @@
       letter-spacing: 1px;
     }
 
-    .btn-pay:hover {
-      background: #0081b8;
-    }
-
     footer {
       text-align: center;
       padding: 2.5rem 1rem;
@@ -358,61 +374,49 @@
 
   <div class="container">
     
-    <!-- Banner do Brinde -->
     <div class="gift-banner">
-      🎁 PROMOÇÃO DE LANÇAMENTO: Compre qualquer Ecobag e ganhe 1 Copo Americano Exclusivo de Brinde!
+      🎁 COMPRE A ECOBAG E GANHE 1 COPO AMERICANO EXCLUSIVO DE BRINDE!
     </div>
 
-    <div class="grid-produtos">
-      
-      <!-- PRODUTO 1: Ecobag Preta -->
-      <div class="card">
-        <div class="card-img-container">
-          <img src="1000679231.png" alt="Ecobag Preta - Arcos da Lapa" />
+    <!-- CARD PRINCIPAL DE OFERTA -->
+    <div class="offer-card">
+      <div class="product-gallery">
+        <!-- Imagem Dinâmica (Troca ao clicar no botão de cor) -->
+        <img id="main-product-img" class="main-img" src="" alt="Ecobag Arcos da Lapa" />
+        
+        <!-- Seleção de Cor -->
+        <div class="color-picker">
+          <button class="color-btn active" id="btn-preta" onclick="selectColor('preta')">
+            <span class="dot-black"></span> Cor Preta
+          </button>
+          <button class="color-btn" id="btn-natural" onclick="selectColor('natural')">
+            <span class="dot-natural"></span> Algodão Cru
+          </button>
         </div>
-        <div class="card-content">
-          <h3 class="card-title">Ecobag Arcos da Lapa (Preta)</h3>
-          <p class="card-desc">Tecido reforçado na cor preta com estampa em alto contraste. Estilo e resistência.</p>
-          <div class="card-price">R$ 49,00</div>
-          <div class="qty-selector">
-            <button class="qty-btn" onclick="updateQty('p1', -1)">-</button>
-            <input type="number" id="qty-p1" class="qty-input" value="0" readonly />
-            <button class="qty-btn" onclick="updateQty('p1', 1)">+</button>
+      </div>
+
+      <div class="product-info">
+        <h2>Ecobag Arcos da Lapa</h2>
+        <p style="color:#66544a; font-size:0.95rem;">Tecido reforçado de alta gramatura com estampa exclusiva inspirada na boemia carioca.</p>
+
+        <div class="product-price">R$ 77,00</div>
+
+        <!-- Alerta do Brinde -->
+        <div class="gift-box-inline">
+          <img id="gift-thumb" src="" alt="Copo Brinde" />
+          <div>
+            <strong>+ BRINDE INCLUSO:</strong><br/>
+            Copo Americano <em>"Salve a Malandragem"</em> será adicionado grátis ao seu pedido!
           </div>
         </div>
-      </div>
 
-      <!-- PRODUTO 2: Ecobag Natural -->
-      <div class="card">
-        <div class="card-img-container">
-          <img src="1000679225.png" alt="Ecobag Natural - Arcos da Lapa" />
-        </div>
-        <div class="card-content">
-          <h3 class="card-title">Ecobag Arcos da Lapa (Natural)</h3>
-          <p class="card-desc">100% Algodão Cru de alta gramatura. Acabamento artesanal e estampa de alta definição.</p>
-          <div class="card-price">R$ 45,00</div>
-          <div class="qty-selector">
-            <button class="qty-btn" onclick="updateQty('p2', -1)">-</button>
-            <input type="number" id="qty-p2" class="qty-input" value="0" readonly />
-            <button class="qty-btn" onclick="updateQty('p2', 1)">+</button>
-          </div>
+        <label style="font-weight: 600; font-size: 0.9rem;">Quantidade:</label>
+        <div class="qty-selector">
+          <button class="qty-btn" onclick="updateQty(-1)">-</button>
+          <input type="number" id="qty-input" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(1)">+</button>
         </div>
       </div>
-
-      <!-- PRODUTO 3: Copo Americano (BRINDE) -->
-      <div class="card">
-        <span class="badge-brinde">Brinde Exclusivo</span>
-        <div class="card-img-container">
-          <img src="1000679211.png" alt="Copo Americano - Salve a Malandragem" />
-        </div>
-        <div class="card-content">
-          <h3 class="card-title">Copo Americano - Salve a Malandragem</h3>
-          <p class="card-desc">O autêntico copo de botequim estampado. Adicionado automaticamente ao seu pedido como brinde!</p>
-          <div class="card-price free">GRÁTIS (Brinde)</div>
-          <p style="font-size:0.85rem; color:#666;">*1 brinde por pedido na compra de uma ecobag.</p>
-        </div>
-      </div>
-
     </div>
 
     <!-- RESUMO E CHECKOUT -->
@@ -449,8 +453,12 @@
       <!-- Detalhes do Valor -->
       <div class="summary-details">
         <div class="summary-row">
-          <span>Subtotal Produtos:</span>
-          <span id="subtotal-val">R$ 0,00</span>
+          <span>Item Selecionado:</span>
+          <strong id="selected-item-text">Ecobag (Cor Preta) x 1</strong>
+        </div>
+        <div class="summary-row">
+          <span>Subtotal:</span>
+          <span id="subtotal-val">R$ 77,00</span>
         </div>
         <div class="summary-row discount" id="discount-row" style="display:none;">
           <span>Desconto Cupom:</span>
@@ -462,7 +470,7 @@
         </div>
         <div class="summary-row total">
           <span>Valor Total:</span>
-          <span id="total-val">R$ 0,00</span>
+          <span id="total-val">R$ 77,00</span>
         </div>
       </div>
 
@@ -475,14 +483,44 @@
   </footer>
 
   <script>
-    const prices = { p1: 49.00, p2: 45.00 };
-    const quantities = { p1: 0, p2: 0 };
+    // IMAGENS EMBUTIDAS (Base64) PARA FUNCIONAR DIRETO NO NAVEGADOR
+    const imgPreta = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="; // Placeholder seguro
+    const imgNatural = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==";
+    
+    // As imagens reais enviadas por você são carregadas diretamente se o arquivo estiver local ou via URL no servidor final
+    const realImages = {
+      preta: "1000679231.png",
+      natural: "1000679225.png",
+      copo: "1000679211.png"
+    };
+
+    let selectedColor = 'preta';
+    let qty = 1;
+    const unitPrice = 77.00;
     let freteValue = 0;
     let discountPercent = 0;
 
-    function updateQty(id, delta) {
-      quantities[id] = Math.max(0, quantities[id] + delta);
-      document.getElementById(`qty-${id}`).value = quantities[id];
+    // Inicialização da imagem
+    document.getElementById('main-product-img').src = realImages.preta;
+    document.getElementById('gift-thumb').src = realImages.copo;
+
+    function selectColor(color) {
+      selectedColor = color;
+      if (color === 'preta') {
+        document.getElementById('main-product-img').src = realImages.preta;
+        document.getElementById('btn-preta').classList.add('active');
+        document.getElementById('btn-natural').classList.remove('active');
+      } else {
+        document.getElementById('main-product-img').src = realImages.natural;
+        document.getElementById('btn-natural').classList.add('active');
+        document.getElementById('btn-preta').classList.remove('active');
+      }
+      updateTotals();
+    }
+
+    function updateQty(delta) {
+      qty = Math.max(1, qty + delta);
+      document.getElementById('qty-input').value = qty;
       updateTotals();
     }
 
@@ -500,9 +538,8 @@
       const code = document.getElementById('cupom-input').value.trim().toUpperCase();
       const msg = document.getElementById('cupom-msg');
 
-      // Exemplo de cupom de teste: PUERE10 (10% de desconto)
       if (code === 'PUERE10' || code === 'INFLUENCER10') {
-        discountPercent = 0.10; // 10%
+        discountPercent = 0.10;
         msg.style.display = 'block';
         msg.style.color = 'var(--green-promo)';
         msg.innerText = '✓ Cupom de 10% OFF aplicado com sucesso!';
@@ -519,7 +556,7 @@
     }
 
     function updateTotals() {
-      const subtotal = (quantities.p1 * prices.p1) + (quantities.p2 * prices.p2);
+      const subtotal = qty * unitPrice;
 
       const freteRadios = document.getElementsByName('frete');
       const freteBoxVisible = document.getElementById('frete-options').style.display === 'block';
@@ -544,20 +581,20 @@
         discountRow.style.display = 'none';
       }
 
-      const total = (subtotal - discountValue) + (subtotal > 0 ? freteValue : 0);
+      const total = (subtotal - discountValue) + freteValue;
 
+      const colorName = selectedColor === 'preta' ? 'Cor Preta' : 'Algodão Cru';
+      document.getElementById('selected-item-text').innerText = `Ecobag (${colorName}) x ${qty}`;
       document.getElementById('subtotal-val').innerText = `R$ ${subtotal.toFixed(2).replace('.', ',')}`;
-      document.getElementById('frete-val').innerText = freteBoxVisible && subtotal > 0 ? `R$ ${freteValue.toFixed(2).replace('.', ',')}` : 'R$ 0,00';
+      document.getElementById('frete-val').innerText = freteBoxVisible ? `R$ ${freteValue.toFixed(2).replace('.', ',')}` : 'R$ 0,00';
       document.getElementById('total-val').innerText = `R$ ${total.toFixed(2).replace('.', ',')}`;
     }
 
+    // Executa ao carregar
+    updateTotals();
+
     function simularCheckout() {
-      const totalItems = quantities.p1 + quantities.p2;
-      if (totalItems === 0) {
-        alert('Selecione ao menos uma Ecobag para realizar o pedido e ganhar seu brinde!');
-        return;
-      }
-      alert('Tudo certo! Na versão final, os dados da compra e o cupom aplicado serão enviados para o checkout do Mercado Pago.');
+      alert(`Pedido confirmado!\nItem: Ecobag (${selectedColor.toUpperCase()}) x ${qty}\nBrinde: 1 Copo Americano\nTotal a ser enviado para o Mercado Pago: R$ ${document.getElementById('total-val').innerText}`);
     }
   </script>
 </body>
