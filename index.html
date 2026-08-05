@@ -53,13 +53,14 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.8rem;
     }
 
-    .logo-svg {
-      width: 75px;
-      height: 75px;
-      margin-bottom: 8px;
+    /* Estilização da imagem da logo */
+    .brand-logo {
+      max-width: 150px;
+      height: auto;
+      object-fit: contain;
     }
 
     header h1 {
@@ -357,14 +358,8 @@
 
   <header>
     <div class="logo-container">
-      <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="46" stroke="#8c4327" stroke-width="3" fill="#f7f3ed"/>
-        <path d="M50 20C35 20 28 32 28 48C28 65 42 78 50 82C58 78 72 65 72 48C72 32 65 20 50 20Z" fill="#8c4327"/>
-        <path d="M50 28C42 28 36 36 36 48C36 60 45 70 50 73C55 70 64 60 64 48C64 36 58 28 50 28Z" fill="#f7f3ed"/>
-        <path d="M50 35V65" stroke="#8c4327" stroke-width="2.5" stroke-linecap="round"/>
-        <path d="M50 45L58 39" stroke="#8c4327" stroke-width="2.5" stroke-linecap="round"/>
-        <path d="M50 53L42 47" stroke="#8c4327" stroke-width="2.5" stroke-linecap="round"/>
-      </svg>
+      <!-- Imagem da Logo subida como logo.png na raiz -->
+      <img src="logo.png" alt="Logo Puerê Puerá" class="brand-logo" />
     </div>
     <h1>Puerê Puerá</h1>
     <p>Arte, Identidade & Feito à Mão</p>
@@ -473,7 +468,6 @@
   </footer>
 
   <script>
-    // MAPEAMENTO DAS IMAGENS ATUALIZADO
     const realImages = {
       natural: "001.png",
       preta: "002.png",
