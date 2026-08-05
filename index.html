@@ -3,17 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tainá Navalha | Ecobags e Copos Exclusivos</title>
+  <title>Puerê Puerá | Ecobags e Copos Exclusivos</title>
   <style>
     :root {
-      --primary-red: #c00d12;
-      --dark-red: #8f060a;
-      --black: #111111;
+      --terracotta: #8c4327;
+      --dark-earth: #4a2717;
+      --sand-light: #f7f3ed;
+      --sand-card: #ffffff;
+      --beige-border: #e2d7c7;
+      --text: #33241c;
       --white: #ffffff;
-      --off-white: #fdfbfb;
-      --gray-light: #f7f3f3;
-      --gray-border: #e6d8d8;
-      --text: #222222;
     }
 
     * {
@@ -24,15 +23,14 @@
     }
 
     body {
-      background-color: var(--off-white);
+      background-color: var(--sand-light);
       color: var(--text);
       line-height: 1.6;
     }
 
-    /* Topo promocional */
     .top-bar {
-      background-color: var(--black);
-      color: var(--white);
+      background-color: var(--dark-earth);
+      color: var(--sand-light);
       text-align: center;
       padding: 6px;
       font-size: 0.85rem;
@@ -41,31 +39,43 @@
       font-weight: 600;
     }
 
-    /* Header com destaque em Vermelho */
     header {
-      background-color: var(--primary-red);
-      color: var(--white);
+      background-color: var(--sand-light);
+      color: var(--dark-earth);
       text-align: center;
-      padding: 3rem 1rem;
-      border-bottom: 5px solid var(--black);
-      box-shadow: 0 4px 15px rgba(192, 13, 18, 0.3);
+      padding: 2.5rem 1rem 2rem 1rem;
+      border-bottom: 3px solid var(--terracotta);
+    }
+
+    /* Logo Container */
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .logo-svg {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 10px;
     }
 
     header h1 {
-      font-size: 2.8rem;
+      font-size: 2.5rem;
       letter-spacing: 4px;
       text-transform: uppercase;
-      color: var(--white);
-      font-weight: 900;
-      text-shadow: 2px 2px 0px var(--black);
+      color: var(--dark-earth);
+      font-weight: 800;
     }
 
     header p {
-      color: #ffebec;
-      font-size: 1.2rem;
-      margin-top: 5px;
+      color: var(--terracotta);
+      font-size: 1.1rem;
+      margin-top: 2px;
       font-weight: 500;
-      font-style: italic;
+      letter-spacing: 1px;
     }
 
     .container {
@@ -81,36 +91,36 @@
     }
 
     .card {
-      background: var(--white);
+      background: var(--sand-card);
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 4px 15px rgba(192, 13, 18, 0.12);
+      box-shadow: 0 4px 15px rgba(74, 39, 23, 0.06);
       display: flex;
       flex-direction: column;
-      border: 2px solid var(--gray-border);
+      border: 1px solid var(--beige-border);
       transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
     }
 
     .card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 25px rgba(192, 13, 18, 0.25);
-      border-color: var(--primary-red);
+      box-shadow: 0 8px 25px rgba(140, 67, 39, 0.15);
+      border-color: var(--terracotta);
     }
 
     .card-img-container {
-      background-color: var(--white);
+      background-color: var(--sand-light);
       height: 320px;
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
       position: relative;
-      border-bottom: 2px solid var(--gray-border);
+      border-bottom: 1px solid var(--beige-border);
       padding: 1rem;
     }
 
     .card-img-container.black-bg {
-      background-color: var(--black);
+      background-color: #1a1513;
     }
 
     .card-img-container img {
@@ -128,22 +138,22 @@
 
     .card-title {
       font-size: 1.3rem;
-      color: var(--black);
+      color: var(--dark-earth);
       margin-bottom: 0.5rem;
       font-weight: 700;
     }
 
     .card-desc {
       font-size: 0.9rem;
-      color: #555;
+      color: #66544a;
       margin-bottom: 1rem;
       flex-grow: 1;
     }
 
     .card-price {
       font-size: 1.6rem;
-      font-weight: 900;
-      color: var(--primary-red);
+      font-weight: 800;
+      color: var(--terracotta);
       margin-bottom: 1rem;
     }
 
@@ -157,18 +167,18 @@
     .qty-btn {
       width: 36px;
       height: 36px;
-      background: var(--gray-light);
-      border: 1px solid var(--primary-red);
+      background: var(--sand-light);
+      border: 1px solid var(--terracotta);
       font-size: 1.2rem;
       font-weight: bold;
       border-radius: 6px;
       cursor: pointer;
-      color: var(--primary-red);
+      color: var(--terracotta);
       transition: all 0.2s;
     }
 
     .qty-btn:hover {
-      background: var(--primary-red);
+      background: var(--terracotta);
       color: var(--white);
     }
 
@@ -177,25 +187,25 @@
       text-align: center;
       font-size: 1rem;
       font-weight: bold;
-      border: 1px solid var(--gray-border);
+      border: 1px solid var(--beige-border);
       border-radius: 6px;
       padding: 5px;
+      background: #fff;
     }
 
-    /* Resumo e Checkout */
     .checkout-box {
-      background: var(--white);
+      background: var(--sand-card);
       border-radius: 12px;
       padding: 2rem;
       margin-top: 3rem;
-      border: 3px solid var(--primary-red);
-      box-shadow: 0 4px 20px rgba(192, 13, 18, 0.15);
+      border: 2px solid var(--terracotta);
+      box-shadow: 0 4px 20px rgba(74, 39, 23, 0.08);
     }
 
     .checkout-box h2 {
-      color: var(--primary-red);
+      color: var(--dark-earth);
       margin-bottom: 1.5rem;
-      border-bottom: 2px solid var(--gray-border);
+      border-bottom: 2px solid var(--beige-border);
       padding-bottom: 0.5rem;
       text-transform: uppercase;
       font-size: 1.5rem;
@@ -213,13 +223,13 @@
     .frete-input {
       flex: 1;
       padding: 10px;
-      border: 1px solid var(--gray-border);
+      border: 1px solid var(--beige-border);
       border-radius: 6px;
       font-size: 1rem;
     }
 
     .frete-btn {
-      background: var(--primary-red);
+      background: var(--dark-earth);
       color: var(--white);
       border: none;
       padding: 0 20px;
@@ -230,7 +240,7 @@
     }
 
     .frete-btn:hover {
-      background: var(--dark-red);
+      background: var(--terracotta);
     }
 
     .frete-options {
@@ -242,11 +252,11 @@
       display: flex;
       justify-content: space-between;
       padding: 10px 14px;
-      border: 1px solid var(--gray-border);
+      border: 1px solid var(--beige-border);
       border-radius: 6px;
       margin-top: 8px;
       cursor: pointer;
-      background: var(--off-white);
+      background: var(--sand-light);
     }
 
     .summary-details {
@@ -263,15 +273,15 @@
     .summary-row.total {
       font-size: 1.6rem;
       font-weight: 900;
-      color: var(--primary-red);
-      border-top: 2px dashed var(--gray-border);
+      color: var(--terracotta);
+      border-top: 2px dashed var(--beige-border);
       padding-top: 12px;
       margin-top: 10px;
     }
 
     .btn-pay {
       width: 100%;
-      background: #009ee3; /* Azul Oficial Mercado Pago */
+      background: #009ee3;
       color: var(--white);
       border: none;
       padding: 1rem;
@@ -292,15 +302,11 @@
     footer {
       text-align: center;
       padding: 2.5rem 1rem;
-      background: var(--black);
-      color: var(--white);
+      background: var(--dark-earth);
+      color: var(--sand-light);
       margin-top: 4rem;
       font-size: 0.95rem;
-      border-top: 5px solid var(--primary-red);
-    }
-
-    footer p {
-      opacity: 0.9;
+      border-top: 5px solid var(--terracotta);
     }
   </style>
 </head>
@@ -311,8 +317,19 @@
   </div>
 
   <header>
-    <h1>Tainá Navalha</h1>
-    <p>Coleção Exclusiva — Malandragem & Boemia</p>
+    <div class="logo-container">
+      <!-- LOGO VETORIAL PUERÊ PUERÁ -->
+      <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="46" stroke="#8c4327" stroke-width="3" fill="#f7f3ed"/>
+        <path d="M50 20C35 20 28 32 28 48C28 65 42 78 50 82C58 78 72 65 72 48C72 32 65 20 50 20Z" fill="#8c4327"/>
+        <path d="M50 28C42 28 36 36 36 48C36 60 45 70 50 73C55 70 64 60 64 48C64 36 58 28 50 28Z" fill="#f7f3ed"/>
+        <path d="M50 35V65" stroke="#8c4327" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M50 45L58 39" stroke="#8c4327" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M50 53L42 47" stroke="#8c4327" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <h1>Puerê Puerá</h1>
+    <p>Arte, Identidade & Feito à Mão</p>
   </header>
 
   <div class="container">
@@ -325,7 +342,7 @@
         </div>
         <div class="card-content">
           <h3 class="card-title">Ecobag Arcos da Lapa (Algodão Cru)</h3>
-          <p class="card-desc">100% Algodão Cru de alta gramatura. Arte exclusiva dos Arcos da Lapa impressa em altíssima definição.</p>
+          <p class="card-desc">100% Algodão Cru de alta gramatura. Arte exclusiva impressa em altíssima definição.</p>
           <div class="card-price">R$ 45,00</div>
           <div class="qty-selector">
             <button class="qty-btn" onclick="updateQty('p1', -1)">-</button>
@@ -342,7 +359,7 @@
         </div>
         <div class="card-content">
           <h3 class="card-title">Ecobag Arcos da Lapa (Preta)</h3>
-          <p class="card-desc">Tecido de algodão reforçado na cor preta com estampa em alto contraste. Estilo e resistência para o dia a dia.</p>
+          <p class="card-desc">Tecido de algodão reforçado na cor preta com estampa em alto contraste. Estilo e resistência.</p>
           <div class="card-price">R$ 49,00</div>
           <div class="qty-selector">
             <button class="qty-btn" onclick="updateQty('p2', -1)">-</button>
@@ -359,7 +376,7 @@
         </div>
         <div class="card-content">
           <h3 class="card-title">Copo Americano - Salve a Malandragem</h3>
-          <p class="card-desc">O autêntico copo de botequim estampado com a carta de Zé Pelintra. Ideal para colecionar e presentear.</p>
+          <p class="card-desc">O autêntico copo de botequim estampado com a carta de Zé Pelintra. Ideal para colecionar.</p>
           <div class="card-price">R$ 25,00</div>
           <div class="qty-selector">
             <button class="qty-btn" onclick="updateQty('p3', -1)">-</button>
@@ -373,18 +390,16 @@
 
     <!-- RESUMO E CHECKOUT -->
     <div class="checkout-box">
-      <h2>Resumo da Compra</h2>
+      2.0 Resumo da Compra
       
-      <!-- Cálculo de CEP -->
       <label style="font-weight: 600; display: block; margin-bottom: 5px;">Calcular Frete (Melhor Envio):</label>
       <div class="frete-section">
         <input type="text" id="cep-input" class="frete-input" placeholder="Digite seu CEP (ex: 20021-000)" maxlength="9" />
         <button class="frete-btn" onclick="simularFrete()">Calcular</button>
       </div>
 
-      <!-- Opções Simuladas de Frete -->
       <div id="frete-options" class="frete-options">
-        <p style="font-size:0.9rem; color:#555; font-weight:600;">Opções de Envio Disponíveis:</p>
+        <p style="font-size:0.9rem; color:#66544a; font-weight:600;">Opções de Envio Disponíveis:</p>
         <label class="frete-option">
           <span><input type="radio" name="frete" value="18.50" onchange="updateTotals()" checked /> Correios PAC (3 a 5 dias)</span>
           <strong>R$ 18,50</strong>
@@ -395,7 +410,6 @@
         </label>
       </div>
 
-      <!-- Detalhes do Valor -->
       <div class="summary-details">
         <div class="summary-row">
           <span>Subtotal dos Produtos:</span>
@@ -416,7 +430,7 @@
   </div>
 
   <footer>
-    <p>© 2026 Tainá Navalha — Todos os direitos reservados.</p>
+    <p>© 2026 Puerê Puerá — Todos os direitos reservados.</p>
   </footer>
 
   <script>
