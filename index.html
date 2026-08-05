@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Puerê Puerá | Ecobags e Copos Exclusivos</title>
+  <title>Puerê Puerá | Ecobags Exclusivas</title>
   <style>
     :root {
       --terracotta: #8c4327;
@@ -13,6 +13,7 @@
       --beige-border: #e2d7c7;
       --text: #33241c;
       --white: #ffffff;
+      --green-promo: #2d7a42;
     }
 
     * {
@@ -32,7 +33,7 @@
       background-color: var(--dark-earth);
       color: var(--sand-light);
       text-align: center;
-      padding: 6px;
+      padding: 8px;
       font-size: 0.85rem;
       letter-spacing: 1px;
       text-transform: uppercase;
@@ -43,11 +44,10 @@
       background-color: var(--sand-light);
       color: var(--dark-earth);
       text-align: center;
-      padding: 2.5rem 1rem 2rem 1rem;
+      padding: 2rem 1rem 1.5rem 1rem;
       border-bottom: 3px solid var(--terracotta);
     }
 
-    /* Logo Container */
     .logo-container {
       display: flex;
       flex-direction: column;
@@ -57,9 +57,9 @@
     }
 
     .logo-svg {
-      width: 80px;
-      height: 80px;
-      margin-bottom: 10px;
+      width: 75px;
+      height: 75px;
+      margin-bottom: 8px;
     }
 
     header h1 {
@@ -75,18 +75,30 @@
       font-size: 1.1rem;
       margin-top: 2px;
       font-weight: 500;
-      letter-spacing: 1px;
     }
 
     .container {
       max-width: 1100px;
-      margin: 2.5rem auto;
+      margin: 2rem auto;
       padding: 0 1rem;
+    }
+
+    /* Banner do Brinde */
+    .gift-banner {
+      background: #eaf5ed;
+      border: 2px dashed var(--green-promo);
+      color: var(--green-promo);
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      font-size: 1.05rem;
     }
 
     .grid-produtos {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
     }
 
@@ -99,6 +111,7 @@
       flex-direction: column;
       border: 1px solid var(--beige-border);
       transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+      position: relative;
     }
 
     .card:hover {
@@ -107,26 +120,33 @@
       border-color: var(--terracotta);
     }
 
+    .badge-brinde {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: var(--green-promo);
+      color: #fff;
+      padding: 4px 10px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      border-radius: 20px;
+      text-transform: uppercase;
+    }
+
     .card-img-container {
-      background-color: var(--sand-light);
+      background-color: #f2ebe1;
       height: 320px;
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      position: relative;
       border-bottom: 1px solid var(--beige-border);
-      padding: 1rem;
-    }
-
-    .card-img-container.black-bg {
-      background-color: #1a1513;
     }
 
     .card-img-container img {
-      max-height: 100%;
-      max-width: 100%;
-      object-fit: contain;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .card-content {
@@ -137,7 +157,7 @@
     }
 
     .card-title {
-      font-size: 1.3rem;
+      font-size: 1.25rem;
       color: var(--dark-earth);
       margin-bottom: 0.5rem;
       font-weight: 700;
@@ -151,10 +171,14 @@
     }
 
     .card-price {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       font-weight: 800;
       color: var(--terracotta);
       margin-bottom: 1rem;
+    }
+
+    .card-price.free {
+      color: var(--green-promo);
     }
 
     .qty-selector {
@@ -174,7 +198,6 @@
       border-radius: 6px;
       cursor: pointer;
       color: var(--terracotta);
-      transition: all 0.2s;
     }
 
     .qty-btn:hover {
@@ -193,6 +216,7 @@
       background: #fff;
     }
 
+    /* Resumo e Checkout */
     .checkout-box {
       background: var(--sand-card);
       border-radius: 12px;
@@ -208,38 +232,36 @@
       border-bottom: 2px solid var(--beige-border);
       padding-bottom: 0.5rem;
       text-transform: uppercase;
-      font-size: 1.5rem;
-      letter-spacing: 1px;
+      font-size: 1.4rem;
       font-weight: 800;
     }
 
-    .frete-section {
+    .input-group {
       display: flex;
       gap: 10px;
-      margin-bottom: 1.5rem;
-      max-width: 400px;
+      margin-bottom: 1.2rem;
+      max-width: 420px;
     }
 
-    .frete-input {
+    .custom-input {
       flex: 1;
       padding: 10px;
       border: 1px solid var(--beige-border);
       border-radius: 6px;
-      font-size: 1rem;
+      font-size: 0.95rem;
     }
 
-    .frete-btn {
+    .btn-action {
       background: var(--dark-earth);
       color: var(--white);
       border: none;
-      padding: 0 20px;
+      padding: 0 18px;
       border-radius: 6px;
       cursor: pointer;
       font-weight: bold;
-      transition: background 0.2s;
     }
 
-    .frete-btn:hover {
+    .btn-action:hover {
       background: var(--terracotta);
     }
 
@@ -260,7 +282,7 @@
     }
 
     .summary-details {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       margin-bottom: 1.5rem;
     }
 
@@ -270,8 +292,13 @@
       margin-bottom: 8px;
     }
 
+    .summary-row.discount {
+      color: var(--green-promo);
+      font-weight: bold;
+    }
+
     .summary-row.total {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       font-weight: 900;
       color: var(--terracotta);
       border-top: 2px dashed var(--beige-border);
@@ -291,8 +318,6 @@
       cursor: pointer;
       text-transform: uppercase;
       letter-spacing: 1px;
-      transition: background 0.2s;
-      box-shadow: 0 4px 12px rgba(0, 158, 227, 0.3);
     }
 
     .btn-pay:hover {
@@ -318,7 +343,6 @@
 
   <header>
     <div class="logo-container">
-      <!-- LOGO VETORIAL PUERÊ PUERÁ -->
       <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="50" cy="50" r="46" stroke="#8c4327" stroke-width="3" fill="#f7f3ed"/>
         <path d="M50 20C35 20 28 32 28 48C28 65 42 78 50 82C58 78 72 65 72 48C72 32 65 20 50 20Z" fill="#8c4327"/>
@@ -333,17 +357,23 @@
   </header>
 
   <div class="container">
+    
+    <!-- Banner do Brinde -->
+    <div class="gift-banner">
+      🎁 PROMOÇÃO DE LANÇAMENTO: Compre qualquer Ecobag e ganhe 1 Copo Americano Exclusivo de Brinde!
+    </div>
+
     <div class="grid-produtos">
       
-      <!-- PRODUTO 1: Ecobag Cru -->
+      <!-- PRODUTO 1: Ecobag Preta -->
       <div class="card">
         <div class="card-img-container">
-          <img src="1000667703.png" alt="Ecobag Algodão Cru - Arcos da Lapa" />
+          <img src="1000679231.png" alt="Ecobag Preta - Arcos da Lapa" />
         </div>
         <div class="card-content">
-          <h3 class="card-title">Ecobag Arcos da Lapa (Algodão Cru)</h3>
-          <p class="card-desc">100% Algodão Cru de alta gramatura. Arte exclusiva impressa em altíssima definição.</p>
-          <div class="card-price">R$ 45,00</div>
+          <h3 class="card-title">Ecobag Arcos da Lapa (Preta)</h3>
+          <p class="card-desc">Tecido reforçado na cor preta com estampa em alto contraste. Estilo e resistência.</p>
+          <div class="card-price">R$ 49,00</div>
           <div class="qty-selector">
             <button class="qty-btn" onclick="updateQty('p1', -1)">-</button>
             <input type="number" id="qty-p1" class="qty-input" value="0" readonly />
@@ -352,15 +382,15 @@
         </div>
       </div>
 
-      <!-- PRODUTO 2: Ecobag Preta -->
+      <!-- PRODUTO 2: Ecobag Natural -->
       <div class="card">
-        <div class="card-img-container black-bg">
-          <img src="1000667703.png" alt="Ecobag Preta - Arcos da Lapa" />
+        <div class="card-img-container">
+          <img src="1000679225.png" alt="Ecobag Natural - Arcos da Lapa" />
         </div>
         <div class="card-content">
-          <h3 class="card-title">Ecobag Arcos da Lapa (Preta)</h3>
-          <p class="card-desc">Tecido de algodão reforçado na cor preta com estampa em alto contraste. Estilo e resistência.</p>
-          <div class="card-price">R$ 49,00</div>
+          <h3 class="card-title">Ecobag Arcos da Lapa (Natural)</h3>
+          <p class="card-desc">100% Algodão Cru de alta gramatura. Acabamento artesanal e estampa de alta definição.</p>
+          <div class="card-price">R$ 45,00</div>
           <div class="qty-selector">
             <button class="qty-btn" onclick="updateQty('p2', -1)">-</button>
             <input type="number" id="qty-p2" class="qty-input" value="0" readonly />
@@ -369,20 +399,17 @@
         </div>
       </div>
 
-      <!-- PRODUTO 3: Copo Americano -->
+      <!-- PRODUTO 3: Copo Americano (BRINDE) -->
       <div class="card">
+        <span class="badge-brinde">Brinde Exclusivo</span>
         <div class="card-img-container">
-          <img src="1000664877.png" alt="Copo Americano - Salve a Malandragem" />
+          <img src="1000679211.png" alt="Copo Americano - Salve a Malandragem" />
         </div>
         <div class="card-content">
           <h3 class="card-title">Copo Americano - Salve a Malandragem</h3>
-          <p class="card-desc">O autêntico copo de botequim estampado com a carta de Zé Pelintra. Ideal para colecionar.</p>
-          <div class="card-price">R$ 25,00</div>
-          <div class="qty-selector">
-            <button class="qty-btn" onclick="updateQty('p3', -1)">-</button>
-            <input type="number" id="qty-p3" class="qty-input" value="0" readonly />
-            <button class="qty-btn" onclick="updateQty('p3', 1)">+</button>
-          </div>
+          <p class="card-desc">O autêntico copo de botequim estampado. Adicionado automaticamente ao seu pedido como brinde!</p>
+          <div class="card-price free">GRÁTIS (Brinde)</div>
+          <p style="font-size:0.85rem; color:#666;">*1 brinde por pedido na compra de uma ecobag.</p>
         </div>
       </div>
 
@@ -390,12 +417,13 @@
 
     <!-- RESUMO E CHECKOUT -->
     <div class="checkout-box">
-      2.0 Resumo da Compra
+      <h2>Resumo do Pedido</h2>
       
+      <!-- Frete -->
       <label style="font-weight: 600; display: block; margin-bottom: 5px;">Calcular Frete (Melhor Envio):</label>
-      <div class="frete-section">
-        <input type="text" id="cep-input" class="frete-input" placeholder="Digite seu CEP (ex: 20021-000)" maxlength="9" />
-        <button class="frete-btn" onclick="simularFrete()">Calcular</button>
+      <div class="input-group">
+        <input type="text" id="cep-input" class="custom-input" placeholder="Digite seu CEP (ex: 20021-000)" maxlength="9" />
+        <button class="btn-action" onclick="simularFrete()">Calcular</button>
       </div>
 
       <div id="frete-options" class="frete-options">
@@ -410,10 +438,23 @@
         </label>
       </div>
 
+      <!-- Cupom de Desconto -->
+      <label style="font-weight: 600; display: block; margin-bottom: 5px;">Possui um Cupom de Desconto?</label>
+      <div class="input-group">
+        <input type="text" id="cupom-input" class="custom-input" placeholder="Digite o cupom (ex: PUERE10)" style="text-transform:uppercase;" />
+        <button class="btn-action" onclick="aplicarCupom()">Aplicar</button>
+      </div>
+      <p id="cupom-msg" style="font-size:0.85rem; margin-top:-8px; margin-bottom:15px; display:none;"></p>
+
+      <!-- Detalhes do Valor -->
       <div class="summary-details">
         <div class="summary-row">
-          <span>Subtotal dos Produtos:</span>
+          <span>Subtotal Produtos:</span>
           <span id="subtotal-val">R$ 0,00</span>
+        </div>
+        <div class="summary-row discount" id="discount-row" style="display:none;">
+          <span>Desconto Cupom:</span>
+          <span id="discount-val">- R$ 0,00</span>
         </div>
         <div class="summary-row">
           <span>Frete:</span>
@@ -434,9 +475,10 @@
   </footer>
 
   <script>
-    const prices = { p1: 45.00, p2: 49.00, p3: 25.00 };
-    const quantities = { p1: 0, p2: 0, p3: 0 };
+    const prices = { p1: 49.00, p2: 45.00 };
+    const quantities = { p1: 0, p2: 0 };
     let freteValue = 0;
+    let discountPercent = 0;
 
     function updateQty(id, delta) {
       quantities[id] = Math.max(0, quantities[id] + delta);
@@ -454,10 +496,30 @@
       updateTotals();
     }
 
+    function aplicarCupom() {
+      const code = document.getElementById('cupom-input').value.trim().toUpperCase();
+      const msg = document.getElementById('cupom-msg');
+
+      // Exemplo de cupom de teste: PUERE10 (10% de desconto)
+      if (code === 'PUERE10' || code === 'INFLUENCER10') {
+        discountPercent = 0.10; // 10%
+        msg.style.display = 'block';
+        msg.style.color = 'var(--green-promo)';
+        msg.innerText = '✓ Cupom de 10% OFF aplicado com sucesso!';
+      } else if (code === '') {
+        alert('Por favor, digite o código do cupom.');
+        return;
+      } else {
+        discountPercent = 0;
+        msg.style.display = 'block';
+        msg.style.color = '#c00d12';
+        msg.innerText = '✕ Cupom inválido ou expirado.';
+      }
+      updateTotals();
+    }
+
     function updateTotals() {
-      const subtotal = (quantities.p1 * prices.p1) + 
-                       (quantities.p2 * prices.p2) + 
-                       (quantities.p3 * prices.p3);
+      const subtotal = (quantities.p1 * prices.p1) + (quantities.p2 * prices.p2);
 
       const freteRadios = document.getElementsByName('frete');
       const freteBoxVisible = document.getElementById('frete-options').style.display === 'block';
@@ -472,7 +534,17 @@
         }
       }
 
-      const total = subtotal + (subtotal > 0 ? freteValue : 0);
+      const discountValue = subtotal * discountPercent;
+      const discountRow = document.getElementById('discount-row');
+
+      if (discountValue > 0) {
+        discountRow.style.display = 'flex';
+        document.getElementById('discount-val').innerText = `- R$ ${discountValue.toFixed(2).replace('.', ',')}`;
+      } else {
+        discountRow.style.display = 'none';
+      }
+
+      const total = (subtotal - discountValue) + (subtotal > 0 ? freteValue : 0);
 
       document.getElementById('subtotal-val').innerText = `R$ ${subtotal.toFixed(2).replace('.', ',')}`;
       document.getElementById('frete-val').innerText = freteBoxVisible && subtotal > 0 ? `R$ ${freteValue.toFixed(2).replace('.', ',')}` : 'R$ 0,00';
@@ -480,12 +552,12 @@
     }
 
     function simularCheckout() {
-      const totalItems = quantities.p1 + quantities.p2 + quantities.p3;
+      const totalItems = quantities.p1 + quantities.p2;
       if (totalItems === 0) {
-        alert('Selecione ao menos um produto antes de ir para o pagamento!');
+        alert('Selecione ao menos uma Ecobag para realizar o pedido e ganhar seu brinde!');
         return;
       }
-      alert('Protótipo interativo! Na versão final, este botão redirecionará o cliente para o checkout do Mercado Pago.');
+      alert('Tudo certo! Na versão final, os dados da compra e o cupom aplicado serão enviados para o checkout do Mercado Pago.');
     }
   </script>
 </body>
