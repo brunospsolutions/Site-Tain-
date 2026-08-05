@@ -95,7 +95,6 @@
       font-size: 1.05rem;
     }
 
-    /* Card Principal de Oferta Unificada */
     .offer-card {
       background: var(--sand-card);
       border-radius: 12px;
@@ -240,7 +239,6 @@
       padding: 5px;
     }
 
-    /* Checkout */
     .checkout-box {
       background: var(--sand-card);
       border-radius: 12px;
@@ -378,13 +376,10 @@
       🎁 COMPRE A ECOBAG E GANHE 1 COPO AMERICANO EXCLUSIVO DE BRINDE!
     </div>
 
-    <!-- CARD PRINCIPAL DE OFERTA -->
     <div class="offer-card">
       <div class="product-gallery">
-        <!-- Imagem Dinâmica (Troca ao clicar no botão de cor) -->
-        <img id="main-product-img" class="main-img" src="" alt="Ecobag Arcos da Lapa" />
+        <img id="main-product-img" class="main-img" src="002.png" alt="Ecobag Arcos da Lapa" />
         
-        <!-- Seleção de Cor -->
         <div class="color-picker">
           <button class="color-btn active" id="btn-preta" onclick="selectColor('preta')">
             <span class="dot-black"></span> Cor Preta
@@ -401,9 +396,8 @@
 
         <div class="product-price">R$ 77,00</div>
 
-        <!-- Alerta do Brinde -->
         <div class="gift-box-inline">
-          <img id="gift-thumb" src="" alt="Copo Brinde" />
+          <img id="gift-thumb" src="003.png" alt="Copo Brinde" />
           <div>
             <strong>+ BRINDE INCLUSO:</strong><br/>
             Copo Americano <em>"Salve a Malandragem"</em> será adicionado grátis ao seu pedido!
@@ -419,11 +413,9 @@
       </div>
     </div>
 
-    <!-- RESUMO E CHECKOUT -->
     <div class="checkout-box">
       <h2>Resumo do Pedido</h2>
       
-      <!-- Frete -->
       <label style="font-weight: 600; display: block; margin-bottom: 5px;">Calcular Frete (Melhor Envio):</label>
       <div class="input-group">
         <input type="text" id="cep-input" class="custom-input" placeholder="Digite seu CEP (ex: 20021-000)" maxlength="9" />
@@ -442,7 +434,6 @@
         </label>
       </div>
 
-      <!-- Cupom de Desconto -->
       <label style="font-weight: 600; display: block; margin-bottom: 5px;">Possui um Cupom de Desconto?</label>
       <div class="input-group">
         <input type="text" id="cupom-input" class="custom-input" placeholder="Digite o cupom (ex: PUERE10)" style="text-transform:uppercase;" />
@@ -450,7 +441,6 @@
       </div>
       <p id="cupom-msg" style="font-size:0.85rem; margin-top:-8px; margin-bottom:15px; display:none;"></p>
 
-      <!-- Detalhes do Valor -->
       <div class="summary-details">
         <div class="summary-row">
           <span>Item Selecionado:</span>
@@ -483,15 +473,11 @@
   </footer>
 
   <script>
-    // IMAGENS EMBUTIDAS (Base64) PARA FUNCIONAR DIRETO NO NAVEGADOR
-    const imgPreta = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="; // Placeholder seguro
-    const imgNatural = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==";
-    
-    // As imagens reais enviadas por você são carregadas diretamente se o arquivo estiver local ou via URL no servidor final
+    // MAPEAMENTO DAS IMAGENS ATUALIZADO
     const realImages = {
-      preta: "1000679231.png",
-      natural: "1000679225.png",
-      copo: "1000679211.png"
+      natural: "001.png",
+      preta: "002.png",
+      copo: "003.png"
     };
 
     let selectedColor = 'preta';
@@ -500,7 +486,6 @@
     let freteValue = 0;
     let discountPercent = 0;
 
-    // Inicialização da imagem
     document.getElementById('main-product-img').src = realImages.preta;
     document.getElementById('gift-thumb').src = realImages.copo;
 
@@ -590,7 +575,6 @@
       document.getElementById('total-val').innerText = `R$ ${total.toFixed(2).replace('.', ',')}`;
     }
 
-    // Executa ao carregar
     updateTotals();
 
     function simularCheckout() {
