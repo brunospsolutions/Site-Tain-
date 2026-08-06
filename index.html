@@ -3,49 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title></title>
+  <title>Puerê Puerá | Ecobag Arcos da Lapa</title>
   <style>
     :root {
-      --terracotta: #8c4327;
-      --dark-earth: #4a2717;
-      --sand-light: #f7f3ed;
-      --sand-card: #ffffff;
-      --beige-border: #e2d7c7;
-      --text: #33241c;
-      --white: #ffffff;
-      --green-promo: #2d7a42;
+      --bg-cream: #fbf8f3;
+      --card-white: #ffffff;
+      --green-primary: #2f5233;
+      --green-dark: #1c3320;
+      --gold-accent: #c4a35a;
+      --gold-light: #f5eedc;
+      --border-color: #e5dbc9;
+      --text-dark: #233124;
+      --text-muted: #5a6b5c;
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Georgia', 'Segoe UI', serif;
     }
 
     body {
-      background-color: var(--sand-light);
-      color: var(--text);
+      background-color: var(--bg-cream);
+      color: var(--text-dark);
       line-height: 1.6;
     }
 
     .top-bar {
-      background-color: var(--dark-earth);
-      color: var(--sand-light);
+      background-color: var(--green-dark);
+      color: var(--gold-light);
       text-align: center;
       padding: 8px;
       font-size: 0.85rem;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
       font-weight: 600;
     }
 
     header {
-      background-color: var(--sand-light);
-      color: var(--dark-earth);
+      background-color: var(--bg-cream);
+      color: var(--green-dark);
       text-align: center;
-      padding: 2rem 1rem 1.5rem 1rem;
-      border-bottom: 3px solid var(--terracotta);
+      padding: 2.5rem 1rem 1.5rem 1rem;
+      border-bottom: 2px solid var(--gold-accent);
     }
 
     .logo-container {
@@ -56,26 +57,28 @@
       margin-bottom: 0.8rem;
     }
 
-    /* Estilização da imagem da logo */
     .brand-logo {
-      max-width: 150px;
+      max-width: 170px;
       height: auto;
       object-fit: contain;
+      border-radius: 50%;
+      box-shadow: 0 4px 15px rgba(47, 82, 51, 0.1);
     }
 
     header h1 {
-      font-size: 2.5rem;
-      letter-spacing: 4px;
+      font-size: 2.6rem;
+      letter-spacing: 3px;
       text-transform: uppercase;
-      color: var(--dark-earth);
-      font-weight: 800;
+      color: var(--green-dark);
+      font-weight: 700;
+      margin-top: 10px;
     }
 
     header p {
-      color: var(--terracotta);
+      color: var(--gold-accent);
       font-size: 1.1rem;
       margin-top: 2px;
-      font-weight: 500;
+      font-style: italic;
     }
 
     .container {
@@ -85,9 +88,9 @@
     }
 
     .gift-banner {
-      background: #eaf5ed;
-      border: 2px dashed var(--green-promo);
-      color: var(--green-promo);
+      background: var(--gold-light);
+      border: 2px dashed var(--gold-accent);
+      color: var(--green-dark);
       padding: 12px 20px;
       border-radius: 8px;
       text-align: center;
@@ -97,10 +100,10 @@
     }
 
     .offer-card {
-      background: var(--sand-card);
+      background: var(--card-white);
       border-radius: 12px;
-      border: 2px solid var(--beige-border);
-      box-shadow: 0 4px 20px rgba(74, 39, 23, 0.08);
+      border: 1px solid var(--border-color);
+      box-shadow: 0 6px 20px rgba(47, 82, 51, 0.06);
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
@@ -125,7 +128,7 @@
       max-height: 380px;
       object-fit: cover;
       border-radius: 8px;
-      border: 1px solid var(--beige-border);
+      border: 1px solid var(--border-color);
     }
 
     .color-picker {
@@ -138,12 +141,12 @@
     .color-btn {
       flex: 1;
       padding: 10px;
-      border: 2px solid var(--beige-border);
-      background: var(--sand-light);
+      border: 2px solid var(--border-color);
+      background: var(--bg-cream);
       border-radius: 8px;
       cursor: pointer;
       font-weight: bold;
-      color: var(--text);
+      color: var(--text-dark);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -152,10 +155,10 @@
     }
 
     .color-btn.active {
-      border-color: var(--terracotta);
+      border-color: var(--green-primary);
       background: #fff;
-      color: var(--terracotta);
-      box-shadow: 0 2px 8px rgba(140, 67, 39, 0.15);
+      color: var(--green-primary);
+      box-shadow: 0 2px 8px rgba(47, 82, 51, 0.15);
     }
 
     .dot-black {
@@ -177,20 +180,20 @@
 
     .product-info h2 {
       font-size: 1.8rem;
-      color: var(--dark-earth);
+      color: var(--green-dark);
       margin-bottom: 0.5rem;
     }
 
     .product-price {
       font-size: 2.2rem;
       font-weight: 900;
-      color: var(--terracotta);
+      color: var(--green-primary);
       margin: 0.8rem 0;
     }
 
     .gift-box-inline {
-      background: #eaf5ed;
-      border-left: 4px solid var(--green-promo);
+      background: var(--gold-light);
+      border-left: 4px solid var(--gold-accent);
       padding: 10px 15px;
       border-radius: 0 6px 6px 0;
       margin: 1rem 0;
@@ -208,7 +211,7 @@
 
     .gift-box-inline div {
       font-size: 0.88rem;
-      color: var(--green-promo);
+      color: var(--green-dark);
     }
 
     .qty-selector {
@@ -221,13 +224,13 @@
     .qty-btn {
       width: 38px;
       height: 38px;
-      background: var(--sand-light);
-      border: 1px solid var(--terracotta);
+      background: var(--bg-cream);
+      border: 1px solid var(--green-primary);
       font-size: 1.2rem;
       font-weight: bold;
       border-radius: 6px;
       cursor: pointer;
-      color: var(--terracotta);
+      color: var(--green-primary);
     }
 
     .qty-input {
@@ -235,24 +238,24 @@
       text-align: center;
       font-size: 1.1rem;
       font-weight: bold;
-      border: 1px solid var(--beige-border);
+      border: 1px solid var(--border-color);
       border-radius: 6px;
       padding: 5px;
     }
 
     .checkout-box {
-      background: var(--sand-card);
+      background: var(--card-white);
       border-radius: 12px;
       padding: 2rem;
       margin-top: 2.5rem;
-      border: 2px solid var(--terracotta);
-      box-shadow: 0 4px 20px rgba(74, 39, 23, 0.08);
+      border: 2px solid var(--green-primary);
+      box-shadow: 0 4px 20px rgba(47, 82, 51, 0.08);
     }
 
     .checkout-box h2 {
-      color: var(--dark-earth);
+      color: var(--green-dark);
       margin-bottom: 1.5rem;
-      border-bottom: 2px solid var(--beige-border);
+      border-bottom: 2px solid var(--border-color);
       padding-bottom: 0.5rem;
       text-transform: uppercase;
       font-size: 1.3rem;
@@ -269,19 +272,23 @@
     .custom-input {
       flex: 1;
       padding: 10px;
-      border: 1px solid var(--beige-border);
+      border: 1px solid var(--border-color);
       border-radius: 6px;
       font-size: 0.95rem;
     }
 
     .btn-action {
-      background: var(--dark-earth);
-      color: var(--white);
+      background: var(--green-primary);
+      color: var(--bg-cream);
       border: none;
       padding: 0 18px;
       border-radius: 6px;
       cursor: pointer;
       font-weight: bold;
+    }
+
+    .btn-action:hover {
+      background: var(--green-dark);
     }
 
     .frete-options {
@@ -293,11 +300,11 @@
       display: flex;
       justify-content: space-between;
       padding: 10px 14px;
-      border: 1px solid var(--beige-border);
+      border: 1px solid var(--border-color);
       border-radius: 6px;
       margin-top: 8px;
       cursor: pointer;
-      background: var(--sand-light);
+      background: var(--bg-cream);
     }
 
     .summary-details {
@@ -312,15 +319,15 @@
     }
 
     .summary-row.discount {
-      color: var(--green-promo);
+      color: var(--green-primary);
       font-weight: bold;
     }
 
     .summary-row.total {
       font-size: 1.5rem;
       font-weight: 900;
-      color: var(--terracotta);
-      border-top: 2px dashed var(--beige-border);
+      color: var(--green-primary);
+      border-top: 2px dashed var(--border-color);
       padding-top: 12px;
       margin-top: 10px;
     }
@@ -328,7 +335,7 @@
     .btn-pay {
       width: 100%;
       background: #009ee3;
-      color: var(--white);
+      color: #ffffff;
       border: none;
       padding: 1rem;
       font-size: 1.2rem;
@@ -339,14 +346,73 @@
       letter-spacing: 1px;
     }
 
+    /* ESTILIZAÇÃO DO POP-UP (MODAL) */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.75);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .modal-content {
+      position: relative;
+      background: var(--card-white);
+      padding: 12px;
+      border-radius: 12px;
+      max-width: 520px;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      border: 2px solid var(--gold-accent);
+    }
+
+    .modal-img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      border-radius: 8px;
+      display: block;
+      object-fit: cover;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: -15px;
+      right: -15px;
+      background: var(--green-primary);
+      color: #ffffff;
+      border: 2px solid #ffffff;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      transition: background 0.2s;
+    }
+
+    .modal-close:hover {
+      background: var(--green-dark);
+    }
+
     footer {
       text-align: center;
       padding: 2.5rem 1rem;
-      background: var(--dark-earth);
-      color: var(--sand-light);
+      background: var(--green-dark);
+      color: var(--gold-light);
       margin-top: 4rem;
       font-size: 0.95rem;
-      border-top: 5px solid var(--terracotta);
+      border-top: 4px solid var(--gold-accent);
     }
   </style>
 </head>
@@ -358,11 +424,10 @@
 
   <header>
     <div class="logo-container">
-      <!-- Imagem da Logo subida como logo.png na raiz -->
       <img src="logo.png" alt="Logo Puerê Puerá" class="brand-logo" />
     </div>
-    <h1></h1>
-    <p></p>
+    <h1>Puerê Puerá</h1>
+    <p>Arte, Identidade & Feito à Mão</p>
   </header>
 
   <div class="container">
@@ -387,7 +452,7 @@
 
       <div class="product-info">
         <h2>Ecobag Arcos da Lapa</h2>
-        <p style="color:#66544a; font-size:0.95rem;">Tecido reforçado de alta gramatura com estampa exclusiva inspirada na boemia carioca.</p>
+        <p style="color:var(--text-muted); font-size:0.95rem;">Tecido reforçado de alta gramatura com estampa exclusiva inspirada na boemia carioca.</p>
 
         <div class="product-price">R$ 77,00</div>
 
@@ -418,7 +483,7 @@
       </div>
 
       <div id="frete-options" class="frete-options">
-        <p style="font-size:0.9rem; color:#66544a; font-weight:600;">Opções de Envio Disponíveis:</p>
+        <p style="font-size:0.9rem; color:var(--text-muted); font-weight:600;">Opções de Envio Disponíveis:</p>
         <label class="frete-option">
           <span><input type="radio" name="frete" value="18.50" onchange="updateTotals()" checked /> Correios PAC (3 a 5 dias)</span>
           <strong>R$ 18,50</strong>
@@ -460,6 +525,14 @@
       </div>
 
       <button class="btn-pay" onclick="simularCheckout()">Pagar com Mercado Pago</button>
+    </div>
+  </div>
+
+  <!-- POP-UP MODAL COM A IMAGEM TESTE.PNG -->
+  <div id="popup-modal" class="modal-overlay" onclick="closeModalOutside(event)">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModalDirect()">&times;</button>
+      <img src="teste.png" alt="Imagem Informativa" class="modal-img" />
     </div>
   </div>
 
@@ -520,7 +593,7 @@
       if (code === 'PUERE10' || code === 'INFLUENCER10') {
         discountPercent = 0.10;
         msg.style.display = 'block';
-        msg.style.color = 'var(--green-promo)';
+        msg.style.color = 'var(--green-primary)';
         msg.innerText = '✓ Cupom de 10% OFF aplicado com sucesso!';
       } else if (code === '') {
         alert('Por favor, digite o código do cupom.');
@@ -571,8 +644,19 @@
 
     updateTotals();
 
+    // AÇÕES DO POP-UP
     function simularCheckout() {
-      alert(`Pedido confirmado!\nItem: Ecobag (${selectedColor.toUpperCase()}) x ${qty}\nBrinde: 1 Copo Americano\nTotal a ser enviado para o Mercado Pago: R$ ${document.getElementById('total-val').innerText}`);
+      document.getElementById('popup-modal').style.display = 'flex';
+    }
+
+    function closeModalDirect() {
+      document.getElementById('popup-modal').style.display = 'none';
+    }
+
+    function closeModalOutside(event) {
+      if (event.target.id === 'popup-modal') {
+        document.getElementById('popup-modal').style.display = 'none';
+      }
     }
   </script>
 </body>
